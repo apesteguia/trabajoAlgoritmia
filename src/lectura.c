@@ -1,4 +1,4 @@
 #include "lectura.h"
 
-void leerDatos(lista *, const char *) {}
+void leerDatos(ListaPersonas *, const char *) {}
 void leerPersonaPantalla(Persona *) {}

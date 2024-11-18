@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "lista.h"
+#include "lectura.h"
 #include <string.h>
 #include <stdlib.h>
 
