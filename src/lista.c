@@ -43,10 +43,28 @@ void nuevaLista(ListaPersonas *l, int k) {
         exit(1);
     }
 }
+
 void insertar(ListaPersonas *l, Persona p) {}
-//bool esNulaLista(ListaPersonas l) {}
+bool esNulaLista(ListaPersonas l) {
+    return (l.ini == NULL && l.fin == NULL);
+}
 void mostrarLista(ListaPersonas l) {}
 void calcularVecinosMasCercanos(ListaPersonas l, Persona p, int n) {}
-void vaciarLista(ListaPersonas *l) {}
+
+void vaciarLista(ListaPersonas *l) {
+    if (!esNulaLista(*l)) {
+        NodoLista *idx, *aux;
+
+        idx = l->ini;
+        while (idx != NULL) {
+            aux = idx;
+            idx = idx->sig;
+            free(aux);
+        }
+    }
+
+    l->ini = NULL;
+    l->fin = NULL;
+}
 //float calcularDistancia(Persona, Persona);
 //float calcularDistancia(Persona, Persona);
