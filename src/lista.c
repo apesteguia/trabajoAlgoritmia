@@ -37,7 +37,7 @@ void nuevaLista(ListaPersonas *l, int k) {
     l->ini = NULL;
     l->fin = NULL;
     l->k = k;
-    l->arrayVecinos = (Vecino*) malloc(sizeof(Vecino)*k);
+    l->arrayVecinos = (Vecino *)malloc(sizeof(Vecino) * k);
     if (l->arrayVecinos == NULL) {
         printf("ERROR ASIGNANDO MEMORIA PARA ARRAY DE VECINOS\n");
         exit(1);
@@ -45,9 +45,7 @@ void nuevaLista(ListaPersonas *l, int k) {
 }
 
 void insertar(ListaPersonas *l, Persona p) {}
-bool esNulaLista(ListaPersonas l) {
-    return (l.ini == NULL && l.fin == NULL);
-}
+bool esNulaLista(ListaPersonas l) { return (l.ini == NULL && l.fin == NULL); }
 void mostrarLista(ListaPersonas l) {}
 void calcularVecinosMasCercanos(ListaPersonas l, Persona p, int n) {}
 
@@ -66,5 +64,5 @@ void vaciarLista(ListaPersonas *l) {
     l->ini = NULL;
     l->fin = NULL;
 }
-//float calcularDistancia(Persona, Persona);
-//float calcularDistancia(Persona, Persona);
+// float calcularDistancia(Persona, Persona);
+// float calcularDistancia(Persona, Persona);
